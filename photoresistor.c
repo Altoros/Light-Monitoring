@@ -40,7 +40,7 @@ uchar get_ADC_Result(void)
     dat1 = dat1 << 1 | digitalRead(ADC_DIO);
   }
 
-  for (i=0;i<8;i++)
+  for (i = 0; i < 8; i++)
   {
     dat2 = dat2 | ((uchar)(digitalRead(ADC_DIO)) << i);
     
