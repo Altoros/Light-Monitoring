@@ -74,7 +74,7 @@ int main(void)
     pinMode(ADC_DIO, OUTPUT);
     adcVal = get_ADC_Result();
     
-    printf("adcval : %d\n", adcVal - 80);
+    printf("%d\n", adcVal - 80);
     delay(400);
   }
   
