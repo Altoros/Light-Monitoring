@@ -60,6 +60,7 @@ uchar get_ADC_Result(void)
 int main(void)
 {
   uchar adcVal;
+  
   if (wiringPiSetup() == -1) 
   {
     printf("setup wiringPi failed !");
@@ -68,14 +69,12 @@ int main(void)
   
   pinMode(ADC_CS, OUTPUT);
   pinMode(ADC_CLK, OUTPUT);
-  
   while (1) 
   {
     pinMode(ADC_DIO, OUTPUT);
     adcVal = get_ADC_Result();
     
     printf("adcval : %d\n", adcVal - 80);
-
     delay(400);
   }
   
